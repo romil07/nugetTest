@@ -13,6 +13,6 @@ stages:
    jobs:
      - job: job1
        pool: 
-        name: Default
+        name: rogoyal
        steps:
         - getPackage: somePackage
