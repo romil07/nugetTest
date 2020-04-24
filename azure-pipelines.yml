@@ -5,7 +5,7 @@ resources:
      type: Nuget
      connection: gh-rg
      name: nugetTest/OctocatApp
-     version: 2.1.11
+     version: 2.1.12
      trigger: true
      
 stages:
