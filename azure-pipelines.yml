@@ -1,3 +1,4 @@
+tirgger: none
 resources:
   packages:
    - package: somePackage
