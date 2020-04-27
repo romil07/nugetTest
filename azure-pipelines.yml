@@ -8,28 +8,28 @@ resources:
      name: nugetTest/OctocatApp
      trigger: true
      
-# stages:
-#  - stage: ConsumeArtifact
-#    jobs:
-#      - job: job1
-#        pool: 
-#         name: rogoyal
-#        steps:
-#         - getPackage: somePackage
-
 stages:
-- stage: Production
-  displayName: Production 
-  jobs: 
-  - deployment: Deployment
-    displayName: Deploy
-    pool: 
-      name: rogoyal
-    environment: ashkirEnv
-    strategy:
-      runOnce:
-        deploy:
-          steps: 
-          - getPackage: somePackage
-          - script: echo Hello, world!
-            displayName: 'Run a one-line script'
+ - stage: ConsumeArtifact
+   jobs:
+     - job: job1
+       pool: 
+        name: rogoyal
+       steps:
+        - getPackage: somePackage
+
+# stages:
+# - stage: Production
+#   displayName: Production 
+#   jobs: 
+#   - deployment: Deployment
+#     displayName: Deploy
+#     pool: 
+#       name: rogoyal
+#     environment: ashkirEnv
+#     strategy:
+#       runOnce:
+#         deploy:
+#           steps: 
+#           - getPackage: somePackage
+#           - script: echo Hello, world!
+#             displayName: 'Run a one-line script'
