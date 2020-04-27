@@ -3,6 +3,7 @@ resources:
   packages:
    - package: somePackage
      type: Nuget
+     version: 2.1.10
      connection: gh-rg
      name: nugetTest/OctocatApp
      trigger: true
