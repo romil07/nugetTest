@@ -1,7 +1,7 @@
 trigger: none
 resources:
   packages:
-   - package: somePackage
+   - package: nugetPackage
      type: Nuget
      version: 2.1.10
      connection: gh-rg
@@ -15,7 +15,7 @@ stages:
        pool: 
         name: rogoyal
        steps:
-        - getPackage: somePackage
+        - getPackage: nugetPackage
 
 # stages:
 # - stage: Production
